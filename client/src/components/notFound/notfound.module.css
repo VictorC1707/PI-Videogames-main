@@ -1,0 +1,268 @@
+.body{
+       background:url("../../imagenes/404.jpg");
+}
+.body {
+       padding: 0;
+       margin-top: 20vh; 
+       display: flex;
+       justify-content: center;
+       align-items: center;}
+   
+   .ule {
+       position: relative;
+       display: flex;
+     }
+     
+     .lie {
+       list-style: none;
+     }
+     
+    
+     
+     input[type="checkbox"] {
+       position: absolute;
+       opacity: 0;
+       cursor: pointer;
+       height: 80px;
+       width: 80px;
+       z-index: 100;
+       margin: -2vh;
+     }
+     
+     .err {
+       position: relative;
+       height: 80px;
+       width: 80px;
+       margin:0vh 2vh 15vh 2vh;
+       background: #18191f;
+       color: #ffffff;
+       display: flex;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       font-size: 50px;
+       cursor: pointer;
+       border-radius: 20px;
+       box-shadow: -1px -1px 4px rgba(255, 255, 255, 0.05),
+         4px 4px 6px rgba(0, 0, 0, 0.2),
+         inset -1px -1px 4px rgba(255, 255, 255, 0.05),
+         inset 1px 1px 1px rgba(0, 0, 0, 0.1);
+     }
+     
+     /* div:before {
+       content: "";
+       position: absolute;
+       top: 2px;
+       left: 2px;
+       width: 75px;
+       height: 38px;
+       border-top-left-radius: 20px;
+       border-top-right-radius: 20px;
+       background: rgba(255, 255, 255, 0.05);
+     } */
+     
+     input[type="checkbox"]:checked ~ div {
+       box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.05),
+         inset 4px 4px 6px rgba(0, 0, 0, 0.2);
+       color: yellow;
+       text-shadow: 0 0 5px yellow, 0 0 5px yellow;
+       animation: glow 1.5s linear infinite;
+     }
+     
+     @keyframes glow {
+       0% {
+         filter: hue-rotate(0deg);
+       }
+       100% {
+         filter: hue-rotate(360deg);
+       }
+     }
+   
+   
+   
+   
+   .contens{
+       margin-top: 10vh;
+       margin-left: 92vh;
+       padding: 10vh;
+   }
+     .spinner {
+       width: 60px;
+       height: 60px;
+       animation: spinner-y0fdc1 2s infinite ease;
+       transform-style: preserve-3d;
+      }
+      
+      .spinner > div {
+       background-color: rgba(9, 255, 0, 0.2);
+       height: 100%;
+       position: absolute;
+       width: 100%;
+       border: 2px solid #000000;
+      }
+      
+      .spinner div:nth-of-type(1) {
+       transform: translateZ(-30px) rotateY(180deg);
+      }
+      
+      .spinner div:nth-of-type(2) {
+       transform: rotateY(-270deg) translateX(50%);
+       transform-origin: top right;
+      }
+      
+      .spinner div:nth-of-type(3) {
+       transform: rotateY(270deg) translateX(-50%);
+       transform-origin: center left;
+      }
+      
+      .spinner div:nth-of-type(4) {
+       transform: rotateX(90deg) translateY(-50%);
+       transform-origin: top center;
+      }
+      
+      .spinner div:nth-of-type(5) {
+       transform: rotateX(-90deg) translateY(50%);
+       transform-origin: bottom center;
+      }
+      
+      .spinner div:nth-of-type(6) {
+       transform: translateZ(30px);
+      }
+      
+      @keyframes spinner-y0fdc1 {
+       0% {
+        transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
+       }
+      
+       50% {
+        transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
+       }
+      
+       100% {
+        transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
+       }
+      }
+
+      .nfbutton {
+       
+       position: relative;
+       padding: 12px 25px;
+       font-size: 1rem;
+       color: #000000;
+       border: 2px solid rgba(0, 0, 0, 0.5);
+       border-radius: 4px;
+       text-shadow: 0 0 15px #000000;
+       text-decoration: none;
+       text-transform: uppercase;
+       letter-spacing: 0.1rem;
+       transition: 0.5s;
+       z-index: 1;
+     }
+     
+     .nfbutton:hover {
+       color: #fff;
+       border: 2px solid rgba(0, 0, 0, 0);
+       box-shadow: 0 0 0px #000000;
+     }
+     
+     .nfbutton::before {
+       content: '';
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background: #000000;
+       z-index: -1;
+       transform: scale(0);
+       transition: 0.5s;
+     }
+     
+     .nfbutton:hover::before {
+       transform: scale(1);
+       transition-delay: 0.5s;
+       box-shadow: 0 0 10px #000000,
+         0 0 30px #000000,
+         0 0 60px #000000;
+     }
+     
+     .nfbutton span {
+       position: absolute;
+       background: #000000;
+       pointer-events: none;
+       border-radius: 2px;
+       box-shadow: 0 0 10px #000000,
+         0 0 20px #000000,
+         0 0 30px #000000,
+         0 0 50px #000000,
+         0 0 100px #000000;
+       transition: 0.5s ease-in-out;
+       transition-delay: 0.25s;
+     }
+     
+     .nfbutton:hover span {
+       opacity: 0;
+       transition-delay: 0s;
+     }
+     
+     .nfbutton span:nth-child(1),
+     .nfbutton span:nth-child(3) {
+       width: 40px;
+       height: 4px;
+     }
+     
+     .nfbutton:hover span:nth-child(1),
+     .nfbutton:hover span:nth-child(3) {
+       transform: translateX(0);
+     }
+     
+     .nfbutton span:nth-child(2),
+     .nfbutton span:nth-child(4) {
+       width: 4px;
+       height: 40px;
+     }
+     
+     .nfbutton:hover span:nth-child(1),
+     .nfbutton:hover span:nth-child(3) {
+       transform: translateY(0);
+     }
+     
+     .nfbutton span:nth-child(1) {
+       top: calc(50% - 2px);
+       left: -50px;
+       transform-origin: left;
+     }
+     
+     .nfbutton:hover span:nth-child(1) {
+       left: 50%;
+     }
+     
+     .nfbutton span:nth-child(3) {
+       top: calc(50% - 2px);
+       right: -50px;
+       transform-origin: right;
+     }
+     
+     .nfbutton:hover span:nth-child(3) {
+       right: 50%;
+     }
+     
+     .nfbutton span:nth-child(2) {
+       left: calc(50% - 2px);
+       top: -50px;
+       transform-origin: top;
+     }
+     
+     .nfbutton:hover span:nth-child(2) {
+       top: 50%;
+     }
+     
+     .nfbutton span:nth-child(4) {
+       left: calc(50% - 2px);
+       bottom: -50px;
+       transform-origin: bottom;
+     }
+     
+     .nfbutton:hover span:nth-child(4 ) {
+       bottom: 50%;
+     }

@@ -1,0 +1,226 @@
+.containerPadre {
+  min-height: 100vh;
+  width: 100%;
+  background: url("../../imagenes/detail.jpg");
+
+  background-attachment: fixed;
+  background-size: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+.containerMain {
+  margin: 0px auto 100px auto;
+  width: 80%;
+  display: flex;
+  background: linear-gradient(rgba(0, 0, 0, 0.822), rgba(0, 0, 0, 0.945));
+  border: 2px solid rgb(70, 187, 20);
+}
+
+.containerButton {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+  padding: 0px 00px 0px 0px;
+}
+
+.containerDelete {
+  display: flex;
+  justify-content: center;
+  padding: 0px 0px 0px 0px;
+}
+
+.containerImg {
+  height: auto;
+  width: 50%;
+  background-size: cover;
+  background-position: center;
+  --_g: 10% /45% 45% no-repeat linear-gradient(#000 0 0);
+  --m:
+    left   var(--_i,0%) top    var(--_g),
+    bottom var(--_i,0%) left   var(--_g),
+    top    var(--_i,0%) right  var(--_g),
+    right  var(--_i,0%) bottom var(--_g);
+  -webkit-mask: var(--m);
+          mask: var(--m);
+  filter: grayscale();
+  transition: .3s linear;
+  cursor: pointer;
+}
+
+.containerImg:hover {
+  --_i: 10%;
+  filter: grayscale(0);
+}
+
+.containerTextDescrip {
+  width: 50%;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.822), rgba(0, 0, 0, 0.508)),
+    url("../../imagenes/giphy.gif") center no-repeat;
+  background-size: cover;
+  border: 2px solid rgb(70, 187, 20);
+  padding: 20px 20px 15px 20px;
+
+  color: #fffeff;
+}
+
+.header {
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.1rem;
+}
+
+.nameDiv {
+  padding: 20px 0px 20px 0px;
+  color: rgb(255, 255, 255);
+}
+
+.nameDiv h2 {
+  font-size: 20px;
+}
+
+.containerImgDescrep {
+  width: 80%;
+  height: 70vh;
+  display: flex;
+
+  flex-wrap: wrap;
+}
+
+.containerGenPlat {
+  border: 2px solid rgb(70, 187, 20);
+
+  font-size: 14px;
+  padding: 15px 5px 0px 10px;
+  text-align: start;
+  line-height: 30px;
+  background: linear-gradient(rgba(1, 1, 1, 0.8), rgba(1, 1, 1, 0.8));
+}
+.containerGenPlat p {
+  padding: 5px;
+}
+
+.descriptionText {
+  font-size: 14px;
+  padding: 10px;
+  margin-top: 2rem;
+  text-justify: distribute;
+  border: 2px solid rgb(70, 187, 20);
+  text-align: start;
+  line-height: 30px;
+  background: linear-gradient(rgba(1, 1, 1, 0.8), rgba(1, 1, 1, 0.8));
+  width: auto;
+  height: 450px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.ratingAndReleased {
+  font-size: 14px;
+  padding: 10px;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid rgb(70, 187, 20);
+  text-align: start;
+  line-height: 25px;
+  background: linear-gradient(rgba(1, 1, 1, 0.8), rgba(1, 1, 1, 0.8));
+}
+.ratingAndReleased p {
+  padding: 10px;
+}
+
+.detailButton {
+  margin: 10px;
+  padding: 10px 20px;
+
+  background-color: #212122;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #ffffff;
+  text-shadow: none;
+  text-decoration: none;
+  box-shadow: transparent;
+  border: 1px solid #ffffff;
+  transition: 0.5s ease;
+  user-select: none;
+}
+
+.detailButton:hover {
+  color: #ffffff;
+  background: #0d6400;
+  border: 1px solid #0d6400;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+  box-shadow: 0 0 5px #0d6400, 0 0 20px #0d6400, 0 0 50px #0d6400,
+    0 0 100px #0d6400;
+}
+
+.detailButton:active {
+  color: #ffffff;
+  background: #0d6400;
+  border: 1px solid #0d6400;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+  box-shadow: 0 0 5px #0d6400, 0 0 20px #0d6400, 0 0 50px #0d6400,
+    0 0 100px #0d6400;
+}
+
+.tittle {
+  border-bottom: 1px solid white;
+  margin-bottom: 0.5em;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonDel {
+  margin: 10px;
+  padding: 10px 20px;
+
+  background-color: #212122;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #ffffff;
+  text-shadow: none;
+  text-decoration: none;
+  box-shadow: transparent;
+  border: 1px solid #ffffff;
+  transition: 0.5s ease;
+  user-select: none;
+}
+
+.buttonDel::after {
+  color: #ffffff;
+  background: #ba0000;
+  border: 1px solid #ba0000;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+  box-shadow: 0 0 5px #ba0000, 0 0 20px #ba0000, 0 0 50px #ba0000,
+    0 0 100px #ba0000;
+}
+
+.buttonDel:hover {
+  color: #ffffff;
+  background: #ba0000;
+  border: 1px solid #ba0000;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+  box-shadow: 0 0 5px #ba0000, 0 0 20px #ba0000, 0 0 50px #ba0000,
+    0 0 100px #ba0000;
+}
+
+.buttonDel:active {
+  color: #ffffff;
+  background: #ba0000;
+  border: 1px solid #ba0000;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+  box-shadow: 0 0 5px #ba0000, 0 0 20px #ba0000, 0 0 50px #ba0000,
+    0 0 100px #ba0000;
+}

@@ -1,0 +1,52 @@
+
+.filters {
+    color: rgb(255, 255, 255);
+    padding: 20px;
+  }
+  
+  
+  
+  .options option {
+    padding:30px;
+  min-height:40px;
+  display:flex;
+  align-items:center;
+  background:#333;
+  border-top:#222 solid 1px;
+  position:absolute;
+  top:0;
+  width: 80%;
+  pointer-events:none;
+  order:2;
+  z-index:1;
+  transition:background .4s ease-in-out;
+  box-sizing:border-box;
+  overflow:hidden;
+  white-space:nowrap;
+  }
+  .options{
+    width: 15%;
+    border: .25em solid var(--glow-color);
+    background-color: #212122;
+    color: var(--glow-color);
+         transition: all 0.4s;
+         border-radius: 1em;
+  outline: none;
+  margin: 15px;
+  padding:10px;
+  }
+
+  .options:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
+    
+   }
+   
+   .options:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em;
+    
+   }
+  .aligns{
+  margin-top: 1em;
+  }

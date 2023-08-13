@@ -1,0 +1,130 @@
+.containerPadre{
+    background:
+    url("../../imagenes/crear.jpg"),center,no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+.titulo{
+    font-size: 20px;
+    margin: 20px;
+}
+.red{
+    color: rgb(255, 129, 129);
+    font-size: 12px;
+}
+.subContainer{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin: auto ;
+  background: linear-gradient(#212121, #212121) padding-box,
+              linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
+  border: 2px solid transparent;
+  font-size: 14px;
+  color: white;
+  box-sizing: border-box;
+  border-radius: 16px;
+}
+
+.subContainer button:active{
+    scale: 0.95;
+}
+
+.subContainer .form{
+    display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.subContainer .form_group{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .subContainer .form_group label{
+    display: block;
+  margin-bottom: 5px;
+  color: #717171;
+  font-weight: 600;
+  font-size: 12px;
+  }
+
+  .subContainer .form_group input{
+    width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: #fff;
+  font-family: inherit;
+  background-color: transparent;
+  border: 1px solid #414141;
+  }
+
+  .subContainer .form_group textarea{
+    width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  resize: none;
+  color: #fff;
+  height: 96px;
+  border: 1px solid #414141;
+  background-color: transparent;
+  font-family: inherit;
+  }
+
+  .subContainer .form_group input::placeholder {
+    opacity: 0.5;
+  }
+
+  .subContainer .form_group input:focus{
+    outline: none;
+  border-color: #e81cff;
+  }
+
+  .subContainer .form_group textarea:focus{
+    outline: none;
+  border-color: #e81cff;
+  }
+
+.selected button{
+    width: 25px;
+    height: 25px;
+    margin-bottom: 5px  ;
+    background-color: red;
+    color: wheat;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+
+.buttonForm {
+    
+  align-items: center;
+  justify-content: center;
+  align-self:center ;
+  font-family: inherit;
+  color: #717171;
+  width: 60%;
+  background: #313131;
+  border: 1px solid #414141;
+  padding: 12px 16px;
+  font-size: 12px;
+  gap: 8px;
+  margin-top: 8px;
+  cursor: pointer;
+  border-radius: 6px;
+   }
+   
+
+   
+   .buttonForm:hover {
+    background-color: #fff;
+    border-color: #fff;
+   }
+   
+
+
+
