@@ -8,7 +8,7 @@ import  store  from '../src/redux/store/index.js'
 import dotenv from "dotenv";
 import axios from 'axios';
 dotenv.config();
-//este es mi domvirtual, aca renderizamos las cosas sin afectar al dom real
+//domvirtual, aca renderizamos las cosas sin afectar al dom real
 
 
 axios.defaults.baseURL = process.env.REACT_APP_API || "http://localhost:3001";
