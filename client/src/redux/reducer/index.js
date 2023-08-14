@@ -82,18 +82,6 @@ function rootReducer(state = initialState, action) {
         } else {
             aux = state.videogamesF
         }
-        // if(!aux.length){
-        //   aux = [{
-        //     id: "asda",
-        //     name: "No se encontraron juegos con ese genero:(",
-        //     background_image: img404,
-        //     description: "Podes crearlo o buscar otros generos",
-        //     released: "9999-99-99",
-        //     rating: "5",
-        //     genres: [{name:"Action"}, {name: "RPG"}],
-        //     platforms: ["Pc", "Steam"], 
-        // }]
-        // }
         return {
             ...state,
             listGames: aux,
