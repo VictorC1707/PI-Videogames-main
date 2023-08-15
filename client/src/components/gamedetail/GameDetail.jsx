@@ -12,6 +12,20 @@ const GameDetail = (props) => {
   const detail = useSelector((state) => state.gameDetail);
   const history = useHistory();
   
+  //obtener datos juego 
+  //async await
+  {/*useEffect(() => {
+  const detallesData = async () => {
+    try {
+      await dispatch(getDetail(id));
+      setCarga(false);
+    } catch (error) {
+      alert("No se encontro el juego");
+      window.location.replace("http://localhost:3000/home");
+    }
+  };
+  fetchData();
+}, [dispatch, id]); */}
 
   useEffect(() => {
     dispatch(getDetail(id)).then(() => setCarga(false)).catch(() => {

@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import s from "../gamecreate/gameCreate.module.css";
 import Loading from "../loading/Loading";
 
+//verificando errores de formulario
 const validate = (input) => {
   let errors = {};
   if (!input.name) {
@@ -51,6 +52,8 @@ const validate = (input) => {
   return errors;
 };
 
+
+
 const GameCreate = () => {
   const dispatch = useDispatch();
   const history = useHistory();
@@ -72,7 +75,6 @@ const GameCreate = () => {
   const [errors, setErrors] = useState({});
 
   useEffect(() => {
-    // dispatch(getVideogames());
     dispatch(getByGenres()).then(() => setCarga(false));
     dispatch(getPlatform());
   }, [dispatch]);
