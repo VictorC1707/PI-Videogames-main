@@ -29,15 +29,18 @@ const Home = (props) => {
   setCurrentPage(pageNumber)
  }
 
+ //ejecuta el efecto dispatch depues de rendereizar el componente, el arreglo [dispatch] asegura que el efecto solo ejecute una vez
   useEffect(() => {
     dispatch(getVideogames()).then(() =>setCarga(false));
   }, [dispatch]);
 
+  //ejecuta cuando se hace click y actualiza el estado currentPage a 1
   const handleClick = (event) => {
     event.preventDefault();
     dispatch(getVideogames());
     setCurrentPage(1);
   };
+
   
   const handleFilterGenres = (event) => {
     event.preventDefault();
@@ -65,7 +68,10 @@ const Home = (props) => {
     setCurrentPage(1);
     setOrden(`Ordenado ${event.target.value}`); //sin esto la pag no se vuelve a renderizar
   };
- // handlefilter es el manejador despacha el target.value(el value viene de las options que son existente, creadoindb y all) que viene de nuestro select a nuestro action, esa action manda un type que va a ser el value como payload a nuestro reducer, el reducer recibe la action type y dependiendo del payload que le llega filtra los juegos
+
+ // manejador despacha el target.value(el value viene de las options que son existente, creadoindb y all)
+ // que viene de nuestro select a nuestro action, esa action manda un type que va a ser el value como payload a nuestro reducer, 
+ //el reducer recibe la action type y dependiendo del payload que le llega filtra los juegos
  //el setCurrenpage(1) esta para que al apretar el boton el paginado vuelva a la pag 1 siempre
   const handleFilterCreated = (event) => {
     event.preventDefault();

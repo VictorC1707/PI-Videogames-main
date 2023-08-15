@@ -14,17 +14,23 @@ export const GET_PLATFORMS = "GET_PLATFORMS";
 export const GET_DETAILS = "GET_DETAILS";
 export const DELETE_GAME = "DELETE_GAME";
 
+//solicitud Get a ruta /videogames
+//promesas
+{/*export const getVideogames = () => (dispatch) => {
+  return axios
+    .get("/videogames")
+    .then((response) => {
+      dispatch({
+        type: VIDEO_GAMES,
+        payload: response.data,
+      });
+    })
+    .catch((error) => {
+      return error;
+    });
+}; */}
 export const getVideogames = () => async (dispatch) => {
   try {
- 
-    //  const call = fetch("http://localhost:3001/videogames").then(data => data.json()).then(response => dispatch({
-    //   type: VIDEO_GAMES,
-    //   payload: response
-    //  }));
-    //  return call;
-     
-    
-    //http://localhost:3001/videogames
     const call = await axios.get("/videogames");
     return dispatch({
       type: VIDEO_GAMES,
@@ -35,6 +41,23 @@ export const getVideogames = () => async (dispatch) => {
     return error;
   }
 };
+
+
+//solicitud get a la ruta /videogames/${id} 
+//promesas
+{/*export const getDetail = (id) => (dispatch) => {
+  return axios
+    .get(/videogames/${id})
+    .then((response) => {
+      dispatch({
+        type: GET_DETAILS,
+        payload: response.data,
+      });
+    })
+    .catch((error) => {
+      return error;
+    });
+}; */}
 
 export const getDetail = (id) => async (dispatch) => {
       try {
@@ -49,6 +72,22 @@ export const getDetail = (id) => async (dispatch) => {
       }
 };
 
+//solicitud delete a la ruta /videogames/${id}
+//promesas
+{/*export const deleteGame = (id) => (dispatch) => {
+  return axios
+    .delete(/videogames/${id})
+    .then((g) => {
+      dispatch({
+        type: DELETE_GAME,
+        payload: g.data,
+      });
+    })
+    .catch((error) => {
+      return error;
+    });
+}; */}
+
 export const deleteGame = (id) => async (dispatch) =>{
 
     try {
@@ -59,11 +98,26 @@ export const deleteGame = (id) => async (dispatch) =>{
     } catch (error) {
       return error;
     }
-
-  
-   
 };
 
+//solicitud get a /videogames
+//promesas
+{/*export const getPlatform = () => (dispatch) => {
+  axios
+    .get("/videogames")
+    .then((response) => {
+      const allPlat = response.data.map((e) => e.platforms);
+      const plats = allPlat.flat();
+      const unicos = [...new Set(plats)];
+      dispatch({
+        type: GET_PLATFORMS,
+        payload: unicos,
+      });
+    })
+    .catch((error) => {
+      return error;
+    });
+}; */}
 export const getPlatform = () => async (dispatch) => {
  try {
     const response = await axios.get(`/videogames`);
@@ -84,16 +138,21 @@ export const getPlatform = () => async (dispatch) => {
  }
 };
 
+//solicitud post a ruta /videogames
+//promesas
+{/*export const postGame = (game) => () => {
+  return axios
+    .post("/videogames", game)
+    .then((response) => {
+      return response;
+    })
+    .catch((error) => {
+      return error;
+    });
+}; */}
 export const postGame = (game) => async () => {
 
   try {
-
-    //  const response = await fetch("https://videogame-henry-pi.herokuapp.com/videogames", {
-    //   method: "POST",
-    //   body: JSON.stringify(game),
-    //   headers: { 'Content-Type': 'application/json' }
-    //  });
-    //  return response;
 
      const response = await axios.post("/videogames", game);
     
@@ -104,6 +163,18 @@ export const postGame = (game) => async () => {
   }
 };
 
+//realiza una solicitud get a la ruta  /videogames con parametro de consulta
+//promesas
+{/*export const getVideogamesName = (name) => (dispatch) => {
+  return axios
+    .get(/videogames?name=${name})
+    .then((response) => {
+      dispatch({ type: VIDEO_GAMES_NAME, payload: response.data });
+    })
+    .catch((error) => {
+      return error;
+    });
+}; */}
 export const getVideogamesName = (name) => async (dispatch) => {
   try {
     const response = await axios.get(`/videogames?name=${name}`);
@@ -115,6 +186,22 @@ export const getVideogamesName = (name) => async (dispatch) => {
     return error;
   }
 };
+
+//solicitud get a la ruta /genres
+//promesas
+{/*export const getByGenres = () => (dispatch) => {
+  axios
+    .get("/genres")
+    .then((response) => {
+      dispatch({
+        type: GET_BY_GENRE,
+        payload: response.data,
+      });
+    })
+    .catch((error) => {
+      return error;
+    });
+}; */}
 
 export const getByGenres = () => async  (dispatch) => {
   try {
